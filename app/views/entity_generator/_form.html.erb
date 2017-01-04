@@ -1,0 +1,64 @@
+<br>
+<div class="splitcontent">
+  <fieldset>
+    <legend><h2><%= l(:label_plugin) %></h2></legend>
+    <p>
+      <%= l(:field_plugin_create) %>:
+      <%= radio_button_tag :plugin_create, '1', @create_new_plugin, id: :plugin_create %> <%= label_tag :plugin_create, l(:field_plugin_name), class: 'inline' %>
+      <%= radio_button_tag :plugin_create, '0', !@create_new_plugin, id: :plugin_select %> <%= label_tag :plugin_select, l(:field_plugin_select), class: 'inline' %>
+    </p>
+  </fieldset>
+  <div class="plugin_create">
+    <p>
+      <%= label_tag :plugin_name, l(:field_entity_name), class: 'required' %>
+      <%= text_field_tag :plugin_name, (@plugin_name || params[:plugin_name].to_s) %>
+    </p>
+    <p><em><%= l(:note_plugin_name_input_value) %></em></p>
+  </div>
+  <div class="plugin_select" style="display: none">
+    <p>
+      <%= select_tag :plugin_selector, available_plugins_for_select(@plugin_name) %>
+    </p>
+  </div>
+</div>
+
+<% @entities.each_with_index do |entity, entity_uuid| %>
+  <%= render partial: 'new_entity', locals: {entity: entity, entity_uuid: entity_uuid} %>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var pluginNameField = $('#plugin_name');
+    var pluginSelectorField = $('#plugin_selector');
+    $('#plugin_select').change(function () {
+      if ($(this).is(':checked')) {
+        pluginNameField.prop('disabled', true);
+        $('.plugin_create').hide();
+        pluginSelectorField.prop('disabled', false);
+        $('.plugin_select').show();
+      }
+    });
+    $('#plugin_create').change(function () {
+      if ($(this).is(':checked')) {
+        pluginNameField.prop('disabled', false);
+        $('.plugin_create').show();
+        pluginSelectorField.prop('disabled', true);
+        $('.plugin_select').hide();
+      }
+    });
+    $('#plugin_select').trigger('change');
+    $('#plugin_create').trigger('change');
+  });
+
+  function updateEntityOptions(el, removeEl) {
+    var $el = $(el);
+    var remEl = removeEl;
+    $el.empty(); // remove old options
+    $.each($('.entity-name'), function (i, el) {
+      if (el.classList[1] != remEl) {
+        var value = $(el).val();
+        $el.append($("<option></option>").attr("value", value).text(value));
+      }
+    });
+  }
+</script>

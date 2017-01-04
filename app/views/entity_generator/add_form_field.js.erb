@@ -1,0 +1,8 @@
+<% case params[:field_to_add] %>
+<% when 'entity_field' %>
+  $('fieldset#<%= params[:entity_uuid] %> div.entity_fields p.add_entity_fields').before('<%=j render partial: "new_entity_field", locals: { entity_uuid: params[:entity_uuid] } %>');
+<% when 'entity_association' %>
+  $('fieldset#<%= params[:entity_uuid] %> div.entity_associations p.add_entity_association').before('<%=j render partial: "new_entity_association", locals: { entity_uuid: params[:entity_uuid] } %>');
+<% else %>
+  $('#entity_form div.entity:last').after('<%=j render partial: 'new_entity' %>');
+<% end %>

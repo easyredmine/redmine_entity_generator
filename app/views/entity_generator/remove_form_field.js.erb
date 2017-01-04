@@ -1,0 +1,8 @@
+<% case params[:type] %>
+<% when 'field' %>
+  $('#additional_field_<%= params[:field_uuid] %>').remove();
+<% when 'association' %>
+  $('#association_<%= params[:association_uuid] %>').remove();
+<% when 'entity' %>
+  $('#<%= params[:entity_uuid] %>').remove();
+<% end %>

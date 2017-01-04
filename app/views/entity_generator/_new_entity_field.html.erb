@@ -1,0 +1,21 @@
+<% entity_uuid ||= '' %>
+<% field_uuid = generate_uuid %>
+<% field ||= {} %>
+<div id="additional_field_<%= field_uuid %>">
+  <p>
+    <%= label_tag "field_name_#{field_uuid}", l(:field_entity_field_name) %>
+    <%= text_field_tag "entities[#{entity_uuid}][fields][#{field_uuid}][name]", field[:name].to_s, id: "field_name_#{field_uuid}" %>
+    <%= link_to '', remove_form_field_entity_generator_path(field_uuid: field_uuid, type: 'field'), remote: true, class: 'icon icon-del' %>
+  </p>
+  <p>
+    <%= label_tag "field_type_#{field_uuid}", l(:field_entity_field_type) %>
+    <%= select_tag "entities[#{entity_uuid}][fields][#{field_uuid}][type]", entity_field_type_options_for_select(field[:type].to_s), id: "field_type_#{field_uuid}" %>
+  </p>
+  <p>
+    <%= label_tag "field_index_#{field_uuid}", nil, class: 'checkbox inline' do %>
+      <%= check_box_tag "entities[#{entity_uuid}][fields][#{field_uuid}][index]", 1, field[:index] ? true : false, id: "field_index_#{field_uuid}" %>
+      <%= l(:field_entity_field_index) %>
+    <% end %>
+  </p>
+  <br>
+</div>

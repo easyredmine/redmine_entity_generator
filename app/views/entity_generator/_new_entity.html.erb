@@ -1,0 +1,66 @@
+<%
+  entity_uuid ||= generate_uuid
+  entity ||= create_entity
+%>
+
+<div class="splitcontent entity" id="entity_<%= entity_uuid %>">
+  <fieldset class="entity" id="<%= entity_uuid %>">
+    <legend><h2><%= l(:label_entity) %></h2></legend>
+    <p>
+      <%= label_tag :entity_name, l(:field_entity_name), class: 'required' %>
+      <%= text_field_tag "entities[#{entity_uuid}][entity_name]", entity[:entity_name], class: "entity-name entity_#{entity_uuid}" %>
+    </p>
+    <p><em><%= l(:note_entity_name_input_value) %></em></p>
+
+    <div class="splitcontentright">
+      <h4><%= l(:label_features) %></h4>
+      <% entity[:entity_options] ||= [] %>
+      <% data_for_entity_options.each do |option_data| %>
+        <%= label_tag "entity_option_#{entity_uuid}#{option_data[:option]}", nil, class: 'checkbox inline' do %>
+          <%= check_box_tag "entities[#{entity_uuid}][entity_options][]", option_data[:option], entity[:entity_options].include?(option_data[:option]), id: "entity_option_#{entity_uuid}#{option_data[:option]}" %>
+          <%= option_data[:label] %><%= " (#{option_data[:description]})" if option_data[:description].present? %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="tabular">
+      <div class="splitcontentleft">
+        <h4><%= l(:label_basic_fields) %></h4>
+        <p>
+          <%= label_tag "entity_option_#{entity_uuid}#{data_for_basic_entity_fields.first[:option]}", l(:label_basic_fields) %>
+          <% entity[:basic_fields] ||= [] %>
+          <% data_for_basic_entity_fields.each do |basic_field| -%>
+            <%= label_tag "entity_option_#{entity_uuid}#{basic_field[:option]}", nil, class: 'checkbox inline' do -%>
+              <%= check_box_tag "entities[#{entity_uuid}][basic_fields][]", basic_field[:option], entity[:basic_fields].include?(basic_field[:option]), id: "entity_option_#{entity_uuid}#{basic_field[:option]}" %>
+              <%= basic_field[:label] %><%= " (#{basic_field[:description]})" if basic_field[:description].present? %>
+            <% end -%>
+            <br>
+          <% end -%>
+        </p>
+
+        <div class="entity_fields">
+          <h4><%= l(:label_additional_fields) %></h4>
+          <% entity[:fields].to_h.each do |field_uuid, field| %>
+            <%= render partial: 'new_entity_field', locals: {entity_uuid: entity_uuid, field: field, field_uuid: field_uuid} %>
+          <% end %>
+          <%= content_tag :p, class: 'add_entity_fields inline' do -%>
+            <%= link_to l(:label_add_entity_field), add_form_field_entity_generator_path(field_to_add: 'entity_field', entity_uuid: entity_uuid), remote: true, class: 'icon icon-add inline' %>
+          <% end -%>
+        </div>
+      </div>
+      <div class="splitcontentright entity_associations">
+        <h4><%= l(:label_associations) %></h4>
+        <% entity[:associations].to_h.each do |association_uuid, association| %>
+          <%= render partial: 'new_entity_association', locals: {entity_uuid: entity_uuid, association: association, association_uuid: association_uuid} %>
+        <% end %>
+        <%= content_tag :p, class: 'add_entity_association inline' do -%>
+          <%= link_to l(:label_add_entity_association), add_form_field_entity_generator_path(field_to_add: 'entity_association', entity_uuid: entity_uuid), remote: true, class: 'icon icon-add inline' %>
+        <% end -%>
+      </div>
+    </div>
+    <p></p>
+    <div>
+    <%= link_to l(:label_remove_entity), remove_form_field_entity_generator_path(entity_uuid: entity_uuid, type: 'entity'), remote: true, class: 'push-left icon icon-del' %>
+    </div>
+  </fieldset>
+</div>

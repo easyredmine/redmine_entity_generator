@@ -1,0 +1,61 @@
+cs:
+  heading_entity_new: Nová entita
+  button_redmine_entity_generator: Redmine Entity Generator
+  button_entity_new: Nová entita
+  error_bad_entity_input: Prosím vyplňte všechna pole (název pluginu, název entity, názvy polí...)
+  error_server_not_restarted: Nová entita byla vytvořena, ale nepodařilo se retartovat server, změny se nyní neprojevují.
+  field_acts_as_activity_provider: Activity Provider
+  field_acts_as_attacheble: Attachable
+  field_acts_as_customizable: Customizable
+  field_acts_as_event: Event
+  field_acts_as_list: List
+  field_acts_as_searchable: Searchable
+  field_acts_as_versioned: Versioned
+  field_acts_as_watchable: Watchable
+  field_acts_as_activity_provider_description: Activity Provider
+  field_acts_as_attacheble_description: Umožňuje přidat přílohy
+  field_acts_as_customizable_description: Umožňuje přidat uživatelská pole
+  field_acts_as_event_description: Event
+  field_acts_as_list_description: Funkce seznamu - např. řazení, předchozí, další
+  field_acts_as_searchable_description: Umožňuje prohledávání
+  field_acts_as_versioned_description: Umožňuje ukládat verze
+  field_acts_as_watchable_description: Umožňuje sledování uživateli
+  field_entity_name: Název
+  field_entity_association_type: Typ asociace
+  field_entity_association_entity: Entita
+  field_entity_association_name: Název asociace
+  field_entity_created_at: Vytvořeno
+  field_entity_field_index: Index
+  field_entity_field_name: Název pole
+  field_entity_field_type: Typ pole
+  field_entity_options: Vlastnosti
+  field_entity_updated_at: Upraveno
+  field_author_description: Má autora
+  field_has_mail_notifications: E-mailová upozornění
+  field_project_description: Má projekt
+  field_plugin_select: Vybrat existující plugin
+  field_plugin_name: Název pluginu
+  field_plugin_create: Vyberte existující plugin nebo zadejte název nového pluginu
+  label_add_entity_field: Přidat další pole
+  label_add_entity: Přidat entitu
+  label_additional_fields: Další pole
+  label_basic_fields: Základní pole
+  label_datetime: Datum a čas
+  label_decimal: Velké číslo
+  label_entity: Entita
+  label_entity_field: Pole entity
+  label_new_plugin: 'Nový plugin s názvem:'
+  label_timestamp: Časová známka
+  label_features: Vlastnosti
+  label_associations: Asociace
+  label_has_one: Has one
+  label_has_many: Has many
+  label_belongs_to: Belongs to
+  label_add_entity_association: Přidat asociaci
+  notice_entity_created: Nová entita byla vytvořena. Nyní je potřeba spustit migrace a restartovat webový server, prosím požádejte o to IT administrátora.
+  entity_generator_create_entity: Vytvořit entitu
+  note_plugin_name_input_value: 'Poznámka: Název pluginu by měl být zapsán jednotným číslem formou camel case, například: NazevNovehoPluginu'
+  note_entity_name_input_value: 'Poznámka: Název entity by měl být zapsán jednotným číslem formou camel case a jednotným číslem, například: NazevNoveEntity'
+  note_plugin_association_name_input_value: 'Název asociace zapsaný formou snake case, například: issues (pro has many), issue (pro belongs_to)'
+  note_plugin_association_class_name_input_value: 'Volitený parametr, název třídy zapsaný formou camel case'
+

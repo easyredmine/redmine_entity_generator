@@ -1,0 +1,64 @@
+en:
+  heading_entity_new: New Entity
+  button_redmine_entity_generator: Redmine Entity Generator
+  button_entity_new: New Entity
+  error_bad_entity_input: Please fill in all fields (plugin name, entity name, field names...)
+  error_server_not_restarted: New entity was created, but the server was not restarted and there are no changes visible.
+  field_acts_as_activity_provider: Activity Provider
+  field_acts_as_attacheble: Attachable
+  field_acts_as_customizable: Customizable
+  field_acts_as_event: Event
+  field_acts_as_list: List
+  field_acts_as_searchable: Searchable
+  field_acts_as_versioned: Versioned
+  field_acts_as_watchable: Watchable
+  field_acts_as_activity_provider_description: Activity Provider
+  field_acts_as_attacheble_description: Allows to add attachments
+  field_acts_as_customizable_description: Allows to add custom fields
+  field_acts_as_event_description: Event
+  field_acts_as_list_description: List features - i.e. sorting, next, previous
+  field_acts_as_searchable_description: Allows search entities
+  field_acts_as_versioned_description: Allows to save versions of the object
+  field_acts_as_watchable_description: Allows to be watched by users
+  field_entity_name: Name
+  field_entity_association_type: Association type
+  field_entity_association_entity: Association entity
+  field_entity_association_name: Association name
+  field_entity_created_at: Created at
+  field_entity_field_name: Field name
+  field_entity_field_type: Field type
+  field_entity_field_index: Index
+  field_entity_options: Options
+  field_entity_updated_at: Updated at
+  field_author_description: Has author
+  field_has_mail_notifications: E-mail notifications
+  field_project_description: Has project
+  field_plugin_select: Select existing plugin
+  field_plugin_name: Create new plugin
+  field_plugin_create: Select existing plugin or enter new plugin name
+  label_add_entity_field: Add another field
+  label_add_entity: Add entity
+  label_additional_fields: Additional fields
+  label_basic_fields: Basic fields
+  label_datetime: Date and time
+  label_decimal: Decimal
+  label_entity: Entity
+  label_plugin: Plugin
+  label_entity_field: Fields
+  label_new_plugin: 'New plugin with name:'
+  label_timestamp: Timestamp
+  label_features: Features
+  label_associations: Associations
+  label_has_one: Has one
+  label_has_many: Has many
+  label_belongs_to: Belongs to
+  label_add_entity_association: Add association
+  label_remove_entity: Remove Entity
+  notice_entity_created: "New entity was created. Now it's neccessary to migrate data and restart web server. Please ask your IT administrator."
+  entity_generator_create_entity: Create Entity
+  note_plugin_name_input_value: 'Note: Plugin name should be in camel case, e.g. NewPluginName'
+  note_entity_name_input_value: 'Note: Entity name should be in camel case and singular, e.g. NewEntityName'
+  note_plugin_association_input_value: 'Optional class name in camel case'
+  note_plugin_association_name_input_value: 'Association name in snake case, e.g. issues (has many), issue (belongs_to)'
+  note_plugin_association_class_name_input_value: 'Optional class name in camel case'
+  permission_entity_generator_create_entity: Create entity

@@ -1,0 +1,15 @@
+<% association_uuid = generate_uuid %>
+<% association ||= {} %>
+<div id="association_<%= association_uuid %>">
+  <p>
+    <%= label_tag "association_type_#{association_uuid}", l(:field_entity_association_type) %>
+    <%= select_tag "entities[#{entity_uuid}][associations][#{association_uuid}][type]", entity_association_type_options_for_select(association[:type].to_s), id: "association_type_#{association_uuid}" %>
+    <%= link_to '', remove_form_field_entity_generator_path(association_uuid: association_uuid, type: 'association'), remote: true, class: 'icon icon-del' %>
+  </p>
+
+  <p>
+    <%= label_tag "association_entity_#{association_uuid}", l(:field_entity_association_entity) %>
+    <%= select_tag "entities[#{entity_uuid}][associations][#{association_uuid}][name]", [], id: "association_entity_#{association_uuid}" %>
+    <%= link_to_function '', "updateEntityOptions($('#association_entity_#{association_uuid}'), 'entity_#{entity_uuid}')", class: 'icon icon-reload' %>
+  </p>
+</div>

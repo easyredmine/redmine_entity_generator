@@ -1,0 +1,15 @@
+<%= title l(:heading_entity_new) %>
+
+<%= form_tag(entity_generator_path, id: 'entity_form', class: 'tabular') do |f| %>
+
+  <div class="box">
+    <%= render partial: 'form' %>
+  </div>
+
+  <p>
+    <div class="issue_submit_buttons form-actions">
+      <%= link_to l(:label_add_entity), add_form_field_entity_generator_path(field_to_add: 'entity', entity_position: 0), remote: true, class: 'button icon icon-add' %>
+      <%= submit_tag l(:button_create), title: l(:button_create), class: 'button-positive' %>
+    </div>
+  </p>
+<% end %>
