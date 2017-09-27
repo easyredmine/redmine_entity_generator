@@ -12,14 +12,17 @@ en:
   field_acts_as_searchable: Searchable
   field_acts_as_versioned: Versioned
   field_acts_as_watchable: Watchable
-  field_acts_as_activity_provider_description: Activity Provider
-  field_acts_as_attacheble_description: Allows to add attachments
-  field_acts_as_customizable_description: Allows to add custom fields
-  field_acts_as_event_description: Event
-  field_acts_as_list_description: List features - i.e. sorting, next, previous
-  field_acts_as_searchable_description: Allows search entities
-  field_acts_as_versioned_description: Allows to save versions of the object
-  field_acts_as_watchable_description: Allows to be watched by users
+  easy_entity_generator:
+    field_acts_as_activity_provider_description: Activity Provider
+    field_acts_as_attacheble_description: Allows to add attachments
+    field_acts_as_customizable_description: Allows to add custom fields
+    field_acts_as_event_description: Event
+    field_acts_as_list_description: List features - i.e. sorting, next, previous
+    field_acts_as_searchable_description: Allows search entities
+    field_acts_as_versioned_description: Allows to save versions of the object
+    field_acts_as_watchable_description: Allows to be watched by users
+    field_author_description: Has author
+    field_project_description: Has project
   field_entity_name: Name
   field_entity_association_type: Association type
   field_entity_association_entity: Association entity
@@ -30,9 +33,7 @@ en:
   field_entity_field_index: Index
   field_entity_options: Options
   field_entity_updated_at: Updated at
-  field_author_description: Has author
   field_has_mail_notifications: E-mail notifications
-  field_project_description: Has project
   field_plugin_select: Select existing plugin
   field_plugin_name: Create new plugin
   field_plugin_create: Select existing plugin or enter new plugin name

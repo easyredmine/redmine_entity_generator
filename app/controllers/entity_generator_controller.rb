@@ -5,8 +5,8 @@ class EntityGeneratorController < ApplicationController
 
   menu_item :entity_generator
 
-  before_filter :authorize_global
-  before_filter :find_plugin_name, :find_entities, only: [:create]
+  before_action :authorize_global
+  before_action :find_plugin_name, :find_entities, only: [:create]
 
   def new
     @entities = [create_entity]
