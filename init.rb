@@ -2,7 +2,7 @@ Redmine::Plugin.register :redmine_entity_generator do
   name 'Easy Entity Generator plugin'
   author 'Easy Software Ltd'
   description 'new plugins & entities generator'
-  version '2016-0.0'
+  version '2016'
   url 'www.easyredmine.com'
   author_url 'www.easysoftware.cz'
 end
