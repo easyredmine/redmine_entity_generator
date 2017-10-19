@@ -12,14 +12,17 @@ cs:
   field_acts_as_searchable: Searchable
   field_acts_as_versioned: Versioned
   field_acts_as_watchable: Watchable
-  field_acts_as_activity_provider_description: Activity Provider
-  field_acts_as_attacheble_description: Umožňuje přidat přílohy
-  field_acts_as_customizable_description: Umožňuje přidat uživatelská pole
-  field_acts_as_event_description: Event
-  field_acts_as_list_description: Funkce seznamu - např. řazení, předchozí, další
-  field_acts_as_searchable_description: Umožňuje prohledávání
-  field_acts_as_versioned_description: Umožňuje ukládat verze
-  field_acts_as_watchable_description: Umožňuje sledování uživateli
+  easy_entity_generator:
+    field_acts_as_activity_provider_description: Activity Provider
+    field_acts_as_attacheble_description: Umožňuje přidat přílohy
+    field_acts_as_customizable_description: Umožňuje přidat uživatelská pole
+    field_acts_as_event_description: Event
+    field_acts_as_list_description: Funkce seznamu - např. řazení, předchozí, další
+    field_acts_as_searchable_description: Umožňuje prohledávání
+    field_acts_as_versioned_description: Umožňuje ukládat verze
+    field_acts_as_watchable_description: Umožňuje sledování uživateli
+    field_author_description: Má autora
+    field_project_description: Má projekt
   field_entity_name: Název
   field_entity_association_type: Typ asociace
   field_entity_association_entity: Entita
@@ -30,9 +33,7 @@ cs:
   field_entity_field_type: Typ pole
   field_entity_options: Vlastnosti
   field_entity_updated_at: Upraveno
-  field_author_description: Má autora
   field_has_mail_notifications: E-mailová upozornění
-  field_project_description: Má projekt
   field_plugin_select: Vybrat existující plugin
   field_plugin_name: Název pluginu
   field_plugin_create: Vyberte existující plugin nebo zadejte název nového pluginu

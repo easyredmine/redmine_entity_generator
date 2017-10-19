@@ -3,11 +3,11 @@ module EntityGeneratorHelper
   def data_for_entity_options
     [
       {label: l(:field_has_mail_notifications), option: '--mail'},
-      {label: l(:field_acts_as_activity_provider), option: '--acts-as-activity_provider', description: l(:field_acts_as_activity_provider_description)},
-      {label: l(:field_acts_as_attacheble), option: '--acts-as-attachable', description: l(:field_acts_as_attacheble_description)},
-      {label: l(:field_acts_as_customizable), option: '--acts-as-customizable', description: l(:field_acts_as_customizable_description)},
-      {label: l(:field_acts_as_event), option: '--acts-as-event', description: l(:field_acts_as_event_description)},
-      {label: l(:field_acts_as_searchable), option: '--acts-as-searchable', description: l(:field_acts_as_searchable_description)},
+      {label: l(:field_acts_as_activity_provider), option: '--acts-as-activity_provider', description: l(:field_acts_as_activity_provider_description, scope: :easy_entity_generator)},
+      {label: l(:field_acts_as_attacheble), option: '--acts-as-attachable', description: l(:field_acts_as_attacheble_description, scope: :easy_entity_generator)},
+      {label: l(:field_acts_as_customizable), option: '--acts-as-customizable', description: l(:field_acts_as_customizable_description, scope: :easy_entity_generator)},
+      {label: l(:field_acts_as_event), option: '--acts-as-event', description: l(:field_acts_as_event_description, scope: :easy_entity_generator)},
+      {label: l(:field_acts_as_searchable), option: '--acts-as-searchable', description: l(:field_acts_as_searchable_description, scope: :easy_entity_generator)},
     ]
   end
 
@@ -16,7 +16,7 @@ module EntityGeneratorHelper
 
     basic_fields_options_and_opposites.keys.each do |option|
       option_text = option.gsub('-', '')
-      data << {label: l("field_#{option_text}"), option: option, description: l("field_#{option_text}_description")}
+      data << {label: l("field_#{option_text}"), option: option, description: l("field_#{option_text}_description", scope: :easy_entity_generator)}
     end
     data
   end
