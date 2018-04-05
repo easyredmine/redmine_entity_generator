@@ -69,10 +69,14 @@ module EntityGeneratorHelper
     end.compact
   end
 
+  def plurality(type, name)
+     type == 'has_many' ? name.pluralize : name.singularize
+  end
+
   def sanitize_entity_associations(associations = [])
     associations = associations.collect do |association|
       if association[:type].in?(get_allowed_association_types) && association[:name].present?
-        sanitized_field = "#{association[:type]}:#{sanitize_name(association[:name].underscore.pluralize)}"
+        sanitized_field = "#{association[:type]}:#{sanitize_name(plurality(association[:type], association[:name].underscore))}"
         sanitized_field << ":#{association[:entity].camelize}" if association[:entity].present?
       end
       sanitized_field
