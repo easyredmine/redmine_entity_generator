@@ -57,8 +57,8 @@ en:
   label_remove_entity: Remove Entity
   notice_entity_created: "New entity was created. Now it's neccessary to migrate data and restart web server. Please ask your IT administrator."
   entity_generator_create_entity: Create Entity
-  note_plugin_name_input_value: 'Note: Plugin name should be in camel case, e.g. NewPluginName'
-  note_entity_name_input_value: 'Note: Entity name should be in camel case and singular, e.g. NewEntityName'
+  note_plugin_name_input_value: 'Note: Plugin name should be in camel case, e.g. NewPluginName in ASCII'
+  note_entity_name_input_value: 'Note: Entity name should be in camel case and singular, e.g. NewEntityName in ASCII'
   note_plugin_association_input_value: 'Optional class name in camel case'
   note_plugin_association_name_input_value: 'Association name in snake case, e.g. issues (has many), issue (belongs_to)'
   note_plugin_association_class_name_input_value: 'Optional class name in camel case'
