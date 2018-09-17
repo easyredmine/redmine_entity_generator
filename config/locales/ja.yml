@@ -1,0 +1,65 @@
+ja:
+  heading_entity_new: 新エンティティー
+  button_redmine_entity_generator: Redmine Entity Generator
+  button_entity_new: 新エンティティー
+  error_bad_entity_input: すべての欄に記入してください（プラグイン名、エンティティー名、フィールド名など）
+  error_server_not_restarted: 新エンティティーが作成されましたが、サーバーが再起動しておらず、明らかな変更はありません。
+  field_acts_as_activity_provider: アクティビティ−・プロバイダー
+  field_acts_as_attacheble: 添付可能
+  field_acts_as_customizable: カスタム可能
+  field_acts_as_event: イベント
+  field_acts_as_list: リスト
+  field_acts_as_searchable: 検索可能
+  field_acts_as_versioned: バージョン済み
+  field_acts_as_watchable: 視聴可能
+  easy_entity_generator:
+    field_acts_as_activity_provider_description: アクティビティ−・プロバイダー
+    field_acts_as_attacheble_description: 添付追加を許可する
+    field_acts_as_customizable_description: カスタム・フィールドの追加を許可する
+    field_acts_as_event_description: イベント
+    field_acts_as_list_description: "機能リスト - つまり、ソート、次、前"
+    field_acts_as_searchable_description: 検索エンティティーを許可する
+    field_acts_as_versioned_description: オブジェクトのバージョンの保存を許可する
+    field_acts_as_watchable_description: ユーザーによる視聴を許可する
+    field_author_description: 作成者あり
+    field_project_description: プロジェクトあり
+  field_entity_name: 氏名
+  field_entity_association_type: アソシエーションの種類
+  field_entity_association_entity: アソシエーション・エンティティー
+  field_entity_association_name: アソシエーション名
+  field_entity_created_at: に作成
+  field_entity_field_name: フィールド名
+  field_entity_field_type: フィールドタイプ
+  field_entity_field_index: インデックス
+  field_entity_options: オプション
+  field_entity_updated_at: に更新
+  field_has_mail_notifications: Eメールによる通知
+  field_plugin_select: 既存プラグインを選択する
+  field_plugin_name: 新プラグインを作成する
+  field_plugin_create: 既存プラグインを選択するか、または新プラグインの名前を入力する
+  label_add_entity_field: 他のフィールドの追加
+  label_add_entity: エンティティーの追加
+  label_additional_fields: 補足フィールド
+  label_basic_fields: 基本フィールド
+  label_datetime: 日付と時間
+  label_decimal: 小数
+  label_entity: エンティティー
+  label_plugin: プラグイン
+  label_entity_field: フィールド
+  label_new_plugin: 名前のある新プラグイン：
+  label_timestamp: タイムスタンプ
+  label_features: 機能
+  label_associations: アソシエーション
+  label_has_one: 一つあり
+  label_has_many: 多数あり
+  label_belongs_to: に所属する
+  label_add_entity_association: アソシエーションの追加
+  label_remove_entity: エンティティーの削除
+  notice_entity_created: 新エンティティーが作成されました。今、データを移行し、ウェブサーバーを再起動する必要があります。IT管理者に問い合わせてください。
+  entity_generator_create_entity: エンティティーを作成する
+  note_plugin_name_input_value: 注：プラグイン名はキャメルケースにする必要があります。例：NewPluginName
+  note_entity_name_input_value: 注：エンティティー名はキャメルケースで単数にする必要があります。例：NewEnityName
+  note_plugin_association_input_value: オプションクラス名はキャメルケース
+  note_plugin_association_name_input_value: アソシエーション名はスネークケースにしてください。例：(has many)、issue(belongs_to)
+  note_plugin_association_class_name_input_value: オプションクラス名はキャメルケース
+  permission_entity_generator_create_entity: エンティティーの作成
