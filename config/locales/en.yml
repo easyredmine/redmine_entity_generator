@@ -63,3 +63,4 @@ en:
   note_plugin_association_name_input_value: 'Association name in snake case, e.g. issues (has many), issue (belongs_to)'
   note_plugin_association_class_name_input_value: 'Optional class name in camel case'
   permission_entity_generator_create_entity: Create entity
+  note_generator_head: We recommend using only users with programmer's knowledge
