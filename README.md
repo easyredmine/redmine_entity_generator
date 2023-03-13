@@ -1,3 +1,5 @@
+# ⚠️ not maintained anymore
+
 Redmine Plugin Generator
 ==================================
 For documentation and requirements, go to https://www.easyredmine.com/redmine-plugin-generator.
